@@ -141,47 +141,37 @@ a:hover, article h2 a:hover {
 	color: #ff0000;
 }
 
-a.buttonize:hover {
-	background-color: #ff0000;
-	color: #fff;
-}
-
 ul li article blockquote {
 	border-color: #ff0000;
 }
 
 header#simple {
-}
-
-
-header#simple {
-	width: 240px;
+	width: 259px;
+	min-height: 590px;
 	position: fixed;
 	/*position: absolute;*/
-	left: 10px;
 	top: 0px;
 	bottom: 0px;
-	/*bottom:1px;*/
 	border-right: 1px solid #e2e2e2;
 	background-color: #fff;
-	z-index: 9999;
-	/*border-bottom: 0px;*/
-	border-bottom: 1px solid #e2e2e2;
-	
-}
 
+	border-bottom: 1px solid #e2e2e2;
+}
 
 
 p.copyleft {
 	position: absolute;
-	left: 30px;
-	bottom: 20px;
-	z-index: 99999;
-	color: #000;
-	color: #e9e9e9;
-	font-size: 12px;
+	left: 60px;
+	bottom: 10px;
+	color: #aaa;
+	font-size: 11px;
 	margin: 0;
 }
+
+    p.copyleft a { 
+        color: #aaa; 
+    } 
+
 .copyleftRSS {
 	-webkit-transform: rotate(180deg);
 	-moz-transform: rotate(180deg);
@@ -195,30 +185,25 @@ section#conductor {
 	position: absolute;
 	top: 0px;
 	right: 0px;
-	left: 250px;
+	left: 260px;
 }
 
 header#simple h1 {
-	width: 250px;
+	width: 100%;
 	margin: 0 auto;
 	padding-top: 45px;
-	padding-left: 30px;
+	text-align: center;
+	font-size: 35px;
+	letter-spacing: -2px;
 }
 
-header#simple h1 a {
-	font-family: "HelveticaNeu-BoldRegular", sans-serif;
-	font-weight: 900;
-	font-size: 38px;
-	/*line-height: 60px;*/
-	border: none;
-}
+header#simple h1 a { border: 0;  }
 
 header#simple h2 {
-	padding-left: 30px;
-	padding-right: 35px;
-	font-weight: 300;
-	margin: 0px;
-	margin-top: 10px;
+        padding: 20px 15px;
+	font-weight: 200;
+	margin: 0 auto;
+	text-align:center; 
 
 	font-size: 18px;
 	line-height: 25px;
@@ -246,7 +231,7 @@ header#simple h3 a {
 
 ul#user_info {
 	position: relative;
-	left: 30px;
+	left: 40px;
 	top: 50px;	
 }
 
@@ -259,7 +244,9 @@ ul#user_info li {
 }
 
 ul#user_info li a {
-	font-size: 16px;
+	font-size: 15px;
+	font-family: Helvetica, Arial, sans-serif;
+	font-weight: 400;
 	border: 3px solid #f8f8f8;
 	border-radius: 30px;
 	background-color: #fff;
@@ -267,21 +254,37 @@ ul#user_info li a {
 	padding: 7px;
 	padding-left: 15px;
 	padding-right: 15px;
-	color: #999;
+	color: #aaa;
 }
 
 ul#user_info li a:hover {
-	color: #000;
-	border: 3px solid #777;
+	color: #444;
+	border: 3px solid #ddd;
 }
 
 
 section#conductor header {
-	display: block;
+	height: 48px;
 	border-bottom: 1px solid #e2e2e2;
 	padding: 40px;
 	padding-left: 50px;	
-	margin-bottom:-40px;
+	font-size: 14px;
+}
+
+section#conductor header h3 {
+        font-size: 15px;
+	text-transform: uppercase;
+	margin-top: 20px;
+	font-family: Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+}
+
+
+section#conductor header p.info {
+	margin-top: 10px;
+}
+
+section#conductor header a {
+	color: #444;
 }
 
 h3.quote {
@@ -337,22 +340,32 @@ article h2 a {
 	color: black;
 	text-decoration: none;
 	border-bottom: 1px solid #CCC;
-	font-family: 'HelveticaNeu-BoldRegular', sans-serif;
-	font-size: 28px;
+	font-size: 23px;
 	line-height: 36px;
-	font-weight: normal;
+	font-weight: bold;
+	letter-spacing: -1px;
 }
 article h2 .anchor {
+        padding-left: 10px;
 	font-size: 20px;
 }
 article h2 a.no-link {
 	border: none;
-	font-size: 35px;
-	line-height: 45px;
+	font-size: 20px;
+	line-height: 29px;
 }
 
 article h2 {
 	margin-bottom: 10px;
+}
+
+
+article h3 {
+	font-size: 17px;
+}
+
+article h4 {
+	font-size: 16px;
 }
 
 article h2.empty {
@@ -367,27 +380,19 @@ article h2 a:visited {
 }
 
 article h2 a:hover {
-	color: #00a2ff;
+	color: red;
 }
 
-article h3 {
-	font-size: 20px;
-	margin-top: 25px;
-	margin-bottom: 25px;
-	font-family: 'HelveticaNeu-BoldRegular', sans-serif;
-	line-height: 36px;
-	font-weight: normal;
-}
 
 a:hover {
-	color: #00a2ff;
+	color: red;
 }
 
 p {
-    line-height: 1.4em;
-    margin: 0 0 1em;
+	line-height: 25px;
+	margin: 20px 0;
 	padding: 0;
-	font-size: 16px;
+	font-size: 15px;
 	color: #4D4D4D;
 	font-family: 'ProximaNovaLight', sans-serif;
 	font-weight: 400;
@@ -411,25 +416,22 @@ article p.post_end a {
 }
 
 
-
-
-
-
-
-a.buttonize {
+.buttonize a { 
 	padding-left: 30px;
 	padding-right: 30px;
 	background-color: #000;
 	color: #fff;
-	border-radius: 30px;
+	border-radius: 10px;
 	font-size: 20px;
 	padding-top: 12px;
 	padding-bottom: 12px;
 	display: inline-block;
 	font-weight: 600;
+
+	border: 0;
 }
 
-a.buttonize.small {
+.buttonize.small {
 	font-size: 15px;
 	padding-left: 30px;
 	padding-right: 30px;
@@ -437,19 +439,12 @@ a.buttonize.small {
 	padding-bottom: 10px;
 }
 
-a.buttonize:hover {
-	background-color: #00a2ff;
+.buttonize a:hover {
+	background-color: red;
 }
 
-a.buttonize.square {
+.buttonize.square {
 	border-radius: 5px;
-}
-
-a.buttonize.square.greendot {
-	padding-left: 44px;
-	background-image: url(images/buttons/greendot.png);
-	background-position: 14px 15px;
-	background-repeat: no-repeat;
 }
 
 figure.hover_select {
@@ -666,7 +661,6 @@ div.notification {
 	margin-top: -180px;
 
 	box-shadow: 0px 0px 3px #a9a9a9;
-	z-index: 999999;
 	display: none;
 	text-align: center;
 }
@@ -764,12 +758,11 @@ li.padded {
     -moz-transition-duration: 0.1s;
     -moz-transition-property: all;
     -moz-transition-timing-function: linear;
-    border:10px solid #000000;
-    /*border:10px solid rgba(0, 0, 0, 0.8);*/
+    border:6px solid #000000;
     float: left;
     position: relative;
     width: 450px;
-
+    padding: 20px;
 }
 
 .clearfix:after {
@@ -859,6 +852,8 @@ div.insertion_point {
 	font-family: 'HelveticaNeu-BoldRegular', sans-serif;
 	line-height: 36px;
 	font-weight: normal;
+	padding-left: 40px;
+	padding-top: 20px
  }
 
  .allcomments {
@@ -868,8 +863,8 @@ div.insertion_point {
     width: 100%;
  }
 .singlecomment {
-	padding:5px;
-	width:100%;
+	padding:10px 35px;
+	width: 650px;
 	border-top: 1px solid #DBDBDB;
 	position: relative;
 	-webkit-transition-property: all;
@@ -886,26 +881,29 @@ div.insertion_point {
 	font-weight:bold;
 }
 
-
- .admin {
- 	 border-right: 5px solid #66A3D2;
- }
-
-.admin:hover{
- 	background-color: #66A3D2!important;
-
-}
-.admin:hover p {
-	color: white;
+.author { /*comment author */
+     font-weight: bold;
+     font-size: 16px;
+     margin: 14px 0 0 0 ;
 }
 
+.author .date {
+	color: #aaa;
+	font-size: 12px;
+	font-weight: normal;
+}
 
-p.iconize {
-	border-radius: 100% 100% 100% 100%;
+.highlighted {
+	border-left: 5px solid #FFCC00;
+	background-color: #FFFFE6;
+}
+
+img.avatar {
+    border-radius: 100% 100% 100% 100%;
     float: left;
     height: 36px;
-    margin-left: 5px;
     width: 36px;
+    margin-left: 5px;
     margin-top:10px;
     margin-right:10px;
 }

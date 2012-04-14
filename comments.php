@@ -24,20 +24,19 @@
 <?php else : ?>
 <?php endif; ?>
 
-    <li class="padded">
+    <li>
       <div class="comments">
         <?php comments_number('No Comments', '1 Comment', '% Comments' );?>
       </div>
 
       <div class="allcomments">
 
+<?php foreach ($comments as $comment) : 
+           $extras = author_highlight();?>
+        <div class="singlecomment clearfix <?php echo $extras?>" <?php echo $oddcomment; ?>id="comment-<?php comment_ID() ?>">
+         <?php echo get_avatar( $comment); ?>
+         <p class='author'><?php comment_author_link()?> <span class='date'><?php comment_date('j F Y') ?> <?php comment_time('H:i') ?></span></p>
 
-
-
-<?php foreach ($comments as $comment) : ?>
-        <div class="singlecomment clearfix admin" <?php echo $oddcomment; ?>id="comment-<?php comment_ID() ?>">
-          <a class="commenter" href="<?php comment_author_link() ?>">
-              <p style="background-image: url(http://files-cdn.formspring.me/profile/20110331/n4d9445d64bd7e_small.jpg)" class="iconize">&nbsp;</p>
 
             <p class="title"><?php _e('')?></p>
           </a>
@@ -77,7 +76,7 @@
 <?php if ('open' == $post->comment_status) : ?>
 <div class="commentarea clearfix square">
 
-<h3 id="respond"><?php _e('Yorum yap, fikrini paylaş')?></h3>
+<h3 id="respond"><?php _e('Want to comment on this?')?></h3>
 <?php if ( get_option('comment_registration') && !$user_ID ) : ?>
 <p><?php _e('Yorum yapabilmek için')?> <a href="<?php echo get_option('siteurl'); ?>/wp-login.php?redirect_to=<?php the_permalink(); ?>"><?php _e('giriş')?></a> <?php _e('yapmalısınız')?>.</p>
 <?php else : ?>
@@ -85,7 +84,7 @@
    <?php if ( $user_ID ) : ?>
   <div class="labelforcomment">Add Your Comment
       </div>
-    <p><?php _e('Hoş geldinis Sn.')?> <a href="<?php echo get_option('siteurl'); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a>. <a href="<?php echo get_option('siteurl'); ?>/wp-login.php?action=logout" title="Çıkış"><?php _e('Çıkış')?> &raquo;</a></p>
+    <p><?php _e('Welcome dear ')?> <a href="<?php echo get_option('siteurl'); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a>. <a href="<?php echo get_option('siteurl'); ?>/wp-login.php?action=logout" title="Logout"><?php _e('Logout')?> &raquo;</a></p>
   <?php else : ?>
       <p>You know the rules. No need reminding.</p>
 
@@ -97,13 +96,13 @@
 
 
             <div class="text_field">
-              <input type="text" size="auto" placeholder="And your email?" name="email" id="email" value="<?php echo $comment_author_email; ?>" class="pane_input">
+              <input type="text" size="auto" placeholder="And your email? (kept hidden)" name="email" id="email" value="<?php echo $comment_author_email; ?>" class="pane_input">
               <div class="insertion_point">&nbsp;</div>
             </div>
 
 
             <div class="text_field">
-              <input type="text" size="auto" placeholder="Personal blog?" name="url" id="url" value="<?php echo $comment_author_url; ?>" class="pane_input">
+              <input type="text" size="auto" placeholder="Personal blog? (optional)" name="url" id="url" value="<?php echo $comment_author_url; ?>" class="pane_input">
               <div class="insertion_point">&nbsp;</div>
             </div>
 
@@ -116,8 +115,9 @@
               <div class="insertion_point">&nbsp;</div>
             </div>
 
-
-    <a class="buttonize square commentsender" value="submit">Sent</a>
+	<div class="buttonize square commentsender">
+	    <a value="submit">Send</a>
+	</div>
     <input type="hidden" name="comment_post_ID" value="<?php echo $id; ?>" />
 
   <?php do_action('comment_form', $post->ID); ?>

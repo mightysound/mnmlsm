@@ -74,7 +74,7 @@
 
 <?php endif; ?>
 <?php if ('open' == $post->comment_status) : ?>
-<div class="commentarea clearfix square">
+<div class="commentarea clearfix square" style='display:none;'>
 
 <h3 id="respond"><?php _e('Want to comment on this?')?></h3>
 <?php if ( get_option('comment_registration') && !$user_ID ) : ?>

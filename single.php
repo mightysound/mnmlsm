@@ -27,8 +27,15 @@
 				</h2>
 
 				<?php the_content(); ?>
+			<hr />
+			<p><em>You have reached end of this post. You can follow my thoughts on <a href='http://twitter.com/ahmetalpbalkan' rel='nofollow'>Twitter</a>.</em></p>
+			
+			<a href="http://news.ycombinator.com/submit" class="hn-share-button" 
+				data-title="<?php the_title(); ?>" data-url="<?php the_permalink(); ?>">Vote on HN</a>
 
+			<div class="fb-like" data-send="false" data-width="400" data-show-faces="false" data-font="arial"></div>
 			</article>
+
 		</li>
 <?php endwhile; else: ?>
 <?php endif; ?>

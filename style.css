@@ -7,6 +7,11 @@ Author: RSS
 Author URI: http://www.rss-ems.com/blog
 */
 
+/*
+Additional Author: ahmet alp balkan
+Additional Author URI: http://ahmetalpbalkan.com/blog
+*/
+
 
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
 audio, canvas, video { display: inline-block; *display: inline; *zoom: 1; }
@@ -149,7 +154,6 @@ header#simple {
 	width: 259px;
 	min-height: 590px;
 	position: fixed;
-	/*position: absolute;*/
 	top: 0px;
 	bottom: 0px;
 	border-right: 1px solid #e2e2e2;
@@ -157,7 +161,6 @@ header#simple {
 
 	border-bottom: 1px solid #e2e2e2;
 }
-
 
 p.copyleft {
 	position: absolute;
@@ -194,7 +197,7 @@ header#simple h1 {
 	padding-top: 45px;
 	text-align: center;
 	font-size: 35px;
-	letter-spacing: -2px;
+	letter-spacing: -3px;
 }
 
 header#simple h1 a { border: 0;  }
@@ -247,7 +250,7 @@ ul#user_info li a {
 	font-size: 15px;
 	font-family: Helvetica, Arial, sans-serif;
 	font-weight: 400;
-	border: 3px solid #f8f8f8;
+	border: 3px solid #f0f0f0;
 	border-radius: 30px;
 	background-color: #fff;
 	z-index: 999;
@@ -388,7 +391,7 @@ a:hover {
 	color: red;
 }
 
-p {
+p, article ul li {
 	line-height: 25px;
 	margin: 20px 0;
 	padding: 0;
